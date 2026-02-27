@@ -85,3 +85,6 @@ vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, { desc = "Code Action"
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to References" })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+vim.keymap.set("n", "<leader>e", function()
+  vim.diagnostic.open_float()
+end, { desc = "Open diagnostic float" })
