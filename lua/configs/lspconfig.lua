@@ -24,3 +24,13 @@ vim.api.nvim_create_autocmd("FileType", {
     end
   end,
 })
+
+-- Clangd config: disable LSP formatting (handled by clang-format via conform)
+vim.lsp.config("clangd", {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
+  cmd = { "clangd", "--background-index", "--clang-tidy", "--header-insertion=iwyu" },
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+})
