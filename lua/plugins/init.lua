@@ -1,5 +1,14 @@
 return {
   {
+    "L3MON4D3/LuaSnip",
+    opts = function(_, opts)
+      opts.history = true
+      opts.update_events = "TextChangedI" -- 🔥 override di sini
+      opts.region_check_events = "InsertEnter"
+      opts.delete_check_events = "InsertLeave"
+    end,
+  },
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
