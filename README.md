@@ -45,4 +45,4 @@ Make sure the following dependencies are installed:
 2. Install NVChad:
 
 ```bash
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+git clone https://github.com/rahadianprasetya/nvim ~/.config/nvim --depth 1
