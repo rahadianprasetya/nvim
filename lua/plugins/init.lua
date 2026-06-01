@@ -23,10 +23,11 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
-    version = "^5", -- Recommended
+    version = "^6",
     lazy = false,
     ft = { "rust" },
-    config = function()
+
+    init = function()
       vim.g.rustaceanvim = {
         dap = {
           autodetect = true,
@@ -60,13 +61,6 @@ return {
     },
     config = function()
       require("dapui").setup()
-    end,
-  },
-  {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function()
-      vim.g.rustfmt_autosave = 1
     end,
   },
   {
